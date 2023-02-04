@@ -7,5 +7,18 @@ ssh, telnet, nc, openssl, s_client, nmap
 
 Commands Used
 ```
-ssh bandit13@bandit.labs.overthewire.org -p 2220
+$ ssh bandit13@bandit.labs.overthewire.org -p 2220
 ```
+
+To access the next level, we simply login using the sshkey.private which was provided to us on the home directory using the following command:
+```
+$ ssh -i sshkey.private bandit14@localhost -p 2220
+```
+
+Now that we have authenticated to ```bandit14``` we will print the password in ```/etc/bandit_pass/bandit14``` 
+```
+$ cat /etc/bandit_pass/bandit14
+```
+
+Password:
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
